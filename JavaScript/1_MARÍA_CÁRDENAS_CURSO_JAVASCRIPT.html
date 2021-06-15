@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>María Cárdenas</title>
+    </head>
+    <body>
+        <script>
+            document.write("<h1>¡Bienvenidos!</h1>");
+            console.log("¡Hola desde la consola!");
+            var x = 100;
+            //Las variables son contenedores para almacenar valores de datos 
+            document.write(x);
+            // alert() se utiliza para crear un cuadro de mensaje.  Ej: alert("¡Este es un cuadro de alerta!")
+            /*Este es un
+                comentario
+                    multilinea*/
+            var num = 42; //Un número sin decimales
+            var price = 55.55; //Un número con decimales
+            document.write(price);
+            var name = 'María';
+            var text = "Mi nombre es María Fernanda"
+            var sayHello = '¡Hola! \'Soy estudiante de Infraestructura en las TIC.\'';
+            //Carácter de escape (\)
+            document.write(sayHello);
+            var isActive = true;
+            var isHoliday = false;
+            var m = 10 + 5;
+            //Operadores matemáticos. Este es un ejemplo con operador de suma (+).
+            document.write(m)
+            var y = 10;
+            var sum = y + 5 + 22 + 45 + 6548;
+            document.write(sum);
+            //Se pueden agregar tantos números o variables como desee o necesite.
+            var mul = 10 * 5;
+            document.write(mul);
+            //Operador de multiplicación (*)
+            var div = 100 / 5;
+            document.write(div);
+            var myVariable = 26 % 6;
+            //El operador Módulo (%) 
+            var nume = 10;
+            // nume == 8 devolverá falso
+            //Operadores de comparación. El operador igual a (==) comprueba si los valores de los operandos son iguales.
+            (4 > 2) && (10 < 15)
+            //Operadores lógicos o booleanos
+            //Para que esta expresión sea verdadera, ambas condiciones deben ser verdaderas. (lo cual es cierto)
+            variable = (condición) ? varlor1 : valor2
+            var isAdult = (edad < 18) ? "Demasiado joven" : "Lo sufiente mayor";
+            //Operador condicional (ternario)
+            var mystring1 = "Estoy aprendiendo";
+            var mystring2 = "Javascript con SoloLearn.";
+            document.write(mystring1 + mystring2);
+            //Operadores de cadena
+            var myNum1 = 7;
+            var myNum2 = 10;
+            if (myNum1 < myNum2) {
+                alert("JavaScript es facil de aprender");
+                //El ejemplo es con una declaración condicional verdadera
+            }
+            //La declaración if se usa para especificar un bloque de código que queremos que se ejecute, si una condición especificada es verdadera.
+            if (expresión) {
+                //se ejecuta si la condición es verdadera
+            }
+            else {
+                //se ejecuta si la condición es falsa
+            }
+            var myNum1 = 7;
+            var myNum2 = 10;
+            if (myNum1 > myNum2) {
+                alert("Esta es mi primera condición");
+            }
+            else {
+                alert("Esta es mi segunda condición");
+            }
+            var curso = 5;
+            if (curso == 1) {
+                document.write("<h1>Tutorial HTML</h1>");
+            } else if (curso == 2) {
+                document.write("<h1>Tutorial CSS</h1>");
+            } else {
+                document.write("<h1>Tutorial JavaScript</h1>");
+            }
+            var day = 2;
+            switch (day) {
+                case 1:
+                    document.write("Monday");
+                    break;
+                case 2:
+                    document.write("Tuesday");
+                    break;
+                case 3:
+                    document.write("Webnesday");
+                    break;
+                default:
+                    document.write("Another day");      
+            }  
+            var color = "yellow";
+            switch (color) {
+                case "blue":
+                    document.write("Esto es azul.");
+                    break;
+                case "red":
+                    document.write("Esto es rojo.");
+                    break;
+                case "green":
+                    document.write("Esto es verde.");
+                    break;
+                case "orange":
+                    document.write("Esto es naranja.");
+                break;
+                default:
+                    document.write("Color no encontrado.");
+            }
+        </script>
+    </body>
+</html>

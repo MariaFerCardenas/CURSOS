@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>María Fernanda</title>
+</head>
+<body>
+    <div id="demo" style="width: 200px">Este es un texto</div>
+    <div id="demo1">Esto es algo de contenido</div>
+    <div id ="demo2">
+        <p id ="par1">Este es un parrafo.</p>
+        <p id ="par2">Este es otro parrafo.</p>
+    </div>
+    <div id="demo3">
+        <p id="par3">Este es un parrafo</p>
+        <p id="par4">Este es otro parrafo</p>
+    </div>
+    <script>
+        var myNum1 = 7;
+        var myNum2 = 10;
+        if (myNum1 < myNum2) {
+            console.log("JavaScript es facil de aprender");
+            //El ejemplo es con una declaración condicional verdadera
+        }
+        //La declaración if se usa para especificar un bloque de código que queremos que se ejecute, si una condición especificada es verdadera.
+        var myNum1 = 7;
+        var myNum2 = 10;
+        if (myNum1 > myNum2) {
+            console.log("Esta es mi primera condición");
+        }
+        else {
+            console.log("Esta es mi segunda condición");
+        }
+        var curso = 5;
+        if (curso == 1) {
+            document.write("<h1>Tutorial HTML</h1>");
+        } else if (curso == 2) {
+            document.write("<h1>Tutorial CSS</h1>");
+        } else {
+            document.write("<h1>Tutorial JavaScript</h1>");
+        }
+        var day = 6;
+        switch (day) {
+            case 1:
+                document.write("Monday");
+                break;
+            case 2:
+                document.write("Tuesday");
+                break;
+            case 3:
+                document.write("Webnesday");
+                break;
+            default:
+                document.write("Another day");
+        }
+        var color = "yellow";
+        switch (color) {
+            case "blue":
+                document.write("Esto es azul.");
+                break;
+            case "red":
+                document.write("Esto es rojo.");
+                break;
+            case "green":
+                document.write("Esto es verde.");
+                break;
+            case "orange":
+                document.write("Esto es naranja.");
+                break;
+            default:
+                document.write("Color no encontrado.");
+        }
+        document.write("ciclo for1");
+        for (let i = 0; i <= 20; i++) {
+            document.write(i + "<br />");
+        }
+        document.write("ciclo for2");
+        var i = 0;
+        for (; i < 10;) {
+            document.write("<br />" + i);
+            i++;
+        }
+        document.write(" <br /> while");
+        var i = 0;
+        while (i <= 10) {
+            document.write("<br />" + i);
+            i++;
+        }
+        document.write(" <br /> while2");
+        var x = 1;
+        while (x <= 5) {
+            document.write("<br />" + x);
+            x = x + 1;
+        }
+        document.write(" <br /> do while1");
+        var i = 20;
+        do {
+            document.write("<br />" + i);
+            i++;
+        } while (i <= 25);
+        document.write(" <br /> Break");
+        for (i = 0; i <= 10; i++) {
+            if (i == 5) {
+                break
+            }
+            document.write("<br />" + i);
+        }
+        document.write(" <br /> Continue");
+        for (i = 0; i <= 10; i++) {
+            if (i == 5) {
+                continue
+            }
+            document.write("<br />" + i);
+        }
+        function myFunction() {
+            alert("Alert box!");
+        }
+        myFunction();
+        //"Alert box!"
+
+        //algun otro codigo
+
+        myFunction();
+        //"Alert box!"
+        function sayHello(name) {
+            alert("Hola, " + name);
+        }
+        sayHello("Fernanda");
+        //Se Puede definir una sola función y pasarle diferentes valores de parámetros (argumentos).
+        function sayHola(name, age) {
+            document.write(name + "tiene" + age + "años.");
+        }
+        sayHola("John", 32)
+        //Múltiples parámetros
+        function myFunction1(a, b) {
+            return a * b;
+        }
+
+        var fun = myFunction1(5, 6);
+        //El valor de retorno terminará en fun
+        function addNumbers(a, b) {
+            var c = a + b;
+            return c;
+        }
+        document.write(addNumbers(40, 2));
+        alert("¿De verdad quieres salir de esta página?");
+        //Cuadro de alerta
+        alert("Hola\n¿Cómo estás?");
+        //Cuadro de alerta con salto de línea
+        var user = prompt("Por favor ingrese su nombre");
+        alert(Usuario);
+        var result = confirm("¿Quieres salir de esta página?");
+        if (result == true) {
+            alert("Gracias por su visita");
+        }
+        else {
+            alert("Gracias por quedarse con nosotros");
+        }
+        //Cuadro de confirmación 
+        var person = {
+            name: "Mafe", age: 17,
+            favColor: "azul", height: 160
+        };
+        var a = person.age;
+        var b = person['age'];
+        /*Métodos de objetos
+            objectName.methoName ()*/
+        function person(nombre, años, color) {
+            this.nombre = nombre;
+            this.años = años;
+            this.faColor = color;
+        }
+        var p1 = new person("Eimy", 22, "rojo");
+        var p2 = new person("Leo", 45, "Amarillo");
+
+        document.write(p1.años); //Produce 22
+        document.write(p2.nombre); //produce "Leo"
+        //Un método es una función que pertenece a un objeto.
+        function person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.changeName = function (name) {
+                this.name = name;
+            }
+        }
+        var p = new person("David", 21);
+        p.changeName("Francy");
+        //Ahora p.name es igual a "Francy"
+        function person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.year0fBirth = bornYear;
+        }
+        function bornYear() {
+            return 2016 - this.age;
+        }
+        //También se puede definir la función fuera de la función constructora y asociarla con el objeto.
+
+        var p = new person("A", 22);
+        document.write(p.year0fBirth());
+        //Ejer. Llame al método por el nombre de propiedad que especificó en la función constructora, en lugar del nombre de la función.
+        var courses = new Array("HTML", "CSS", "JS");
+        //Las matrices almacenan varios valores en una sola variable. 
+        var courses = courses[0]; //HTML  //Esta declaración accede al valor del primer elemento en los cursos.
+        // Acceder a una matriz. Se refiere a un elemento de matriz refiriéndose al número de índice escrito entre corchetes
+        courses[1] = "C++"; //Esta declaración cambia el segundo elemento
+        var Cursos = new Array(3);
+        Cursos[0] = "HTML";
+        Cursos[1] = "CSS";
+        Cursos[2] = "JS";
+        //También puede declarar una matriz, decirle la cantidad de elementos que almacenará y agregar los elementos más tarde.
+        var courses1 = ["HTML", "CSS", "JS"];
+        document.write(courses1.length);
+        //La propiedad length de una matriz devuelve el número de sus elementos.
+        var c1 = ["HTML", "CSS"];
+        var c2 = ["JS", "C++"];
+        var cursos1 = c1.concat(c2);
+        /*El método concat () permite unir matrices y crear una matriz completamente nueva.
+            Por lo que en el ejmplo la matriz c1 y c2 no se vera afectada*/
+        var n = prompt("Ingrese un múmero", "");
+        var answer = Math.sqrt(n);
+        alert("La ra´z cuadrada de" + n + es + respuesta);
+        function myAlert() {
+            alert("Hola");
+        }
+        setInterval(myAlert, 3000);
+        //El método setInterval () llama a una función o evalúa una expresión a intervalos específicos (en milisegundos).
+        //El objeto de fecha
+        var d = new Date();
+        //d almacena la fecha y hora actuales
+        new Date(milisegundos)
+        new Date(dateString)
+        new Date(year, month, day, hours, minutes, seconds, milliseconds)
+        //Las otras formas de inicializar fechas permiten la creación de nuevos objetos de fecha a partir de la fecha y hora especificadas.
+        function printTime() {
+            var d1 = new Date();
+            var hours = d1.getHours();
+            var mins = d1.getMinutes();
+            var secs = d1.getSeconds();
+            document.body.innerHTML = hours + ":" + mins + ":" + secs;
+        }
+        setInterval(printTime, 1000);
+        //Ejemplo: Creemos un programa que imprima la hora actual en el navegador una vez por segundo.
+        document.body.innerHTML = "Algún texto";
+        //El objeto del documento
+        //Como body es un elemento del DOM, podemos acceder a él usando el objeto de documento y cambiar el contenido de la propiedad innerHTML.
+
+        //Estos tres métodos son los más utilizados para seleccionar elementos HTML:
+        //Encuentra el elemento por id
+        document.getElementById(id)
+
+        //Encuentra el elemento class name
+        document.getElementsByClassName(name)
+
+        //Encuentra el elemento tag name
+        document.getElementsByTagName(name)
+
+        /*En el siguiente ejemplo, el método getElementById 
+            se usa para seleccionar el elemento con id = "demo" y cambiar su contenido*/
+        var elem = document.getElementById("demo");
+        elem.innerHTML = "Hello World!";
+        var arr = document.getElementsByClassName("demo");
+        //acceder al segundo elemento
+        arr[1].innerHTML = "Hola";
+        //El método getElementsByClassName () devuelve una colección de todos los elementos del documento con el nombre de clase especificado.
+
+        //Elementos del DOM
+        element.childNodes //Devuelve una matriz de los nodos secundarios de un elemento.
+        element.firstChild //Devuelve el primer nodo hijo de un elemento.
+        element.lastChild //Devuelve el último nodo hijo de un elemento.
+        element.hasChildNodes //Devuelve verdadero si un elemento tiene nodos secundarios; de lo contrario, falso.
+        element.nextSibling //Devuelve el siguiente nodo en el mismo nivel de árbol.
+        element.previousSibling //Devuelve el nodo anterior en el mismo nivel de árbol.
+        element.parentNode //Devuelve el nodo padre de un elemento.
+        var de = document.getElementById("demo");
+        de.style.color = "6600FF";
+        de.style.width = "100px";
+        //El estilo de los elementos HTML también se puede cambiar usando JavaScript.
+
+        //Creando elementos
+        element.cloneNode() //clona un elemento y devuelve el nodo resultante
+            document.createElement(element) //(elemento) crea un nuevo nodo de elemento.
+                document.createTextNode(text) //(texto) crea un nuevo nodo de texto.
+        //Creando un nuevo parrafo
+        var p = document.createElement("p");
+        var node = document.createTextNode("Algún texto nuevo");
+        //Agregando el texto al parrafo
+        p.appendChild(node);
+
+        var div1 = document.getElementById("demo1");
+        //Agregando el parrafo al div1
+        div1.appendChild(p);
+
+        var parent = document.getElementById("demo2");
+        var child = document.getElementById("par1");
+        parent.removeChild(child);
+
+        //Reemplazo de elementos
+        var p3 = document.createElement(p3);
+        var node1 = document.createTextNode("Esto es nuevo");
+        p3.appendChild(node1);
+        var parent1 = document.getElementById("demo3");
+        var child1 = document.getElementById("par3");
+        parent1.replaceChild(p3, child1);
+    </script>
+</body>
+
+</html>
